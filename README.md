@@ -1,7 +1,5 @@
 # Mario-RunGame-JS
 
-# 🎮 Mario Run Game
-
 Um mini-jogo de corrida estilo "endless runner" inspirado no universo do Mario, desenvolvido com **HTML**, **CSS** e **JavaScript puro**. O jogador deve evitar obstáculos (o cano) pulando com o Mario, acumulando pontos ao sobreviver por mais tempo.
 
 ---
