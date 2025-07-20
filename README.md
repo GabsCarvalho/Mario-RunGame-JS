@@ -4,8 +4,6 @@
 
 Um mini-jogo de corrida estilo "endless runner" inspirado no universo do Mario, desenvolvido com **HTML**, **CSS** e **JavaScript puro**. O jogador deve evitar obstáculos (o cano) pulando com o Mario, acumulando pontos ao sobreviver por mais tempo.
 
-> 🚀 Projeto idealizado e desenvolvido por [Gabriel Carvalho](https://www.linkedin.com/in/gabriel-a-r-carvalho/)
-
 ---
 
 ![Mario Run Game Screenshot](./IMAGEM/mario.gif)
