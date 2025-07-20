@@ -1,0 +1,235 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Jersey+20&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jersey 20', sans-serif;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.gameboard {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 15px solid green;
+    background: linear-gradient(to bottom, #87CEEB, #ffffff 80%, #228B22 80%, #228B22);
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s linear infinite;
+    right: -550px;
+    cursor: alias;
+    pointer-events: none;
+}
+
+.Mario {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 150px;
+    cursor: alias;
+    pointer-events: none;
+}
+
+.jump {
+    animation: mario-jump 500ms ease-out;
+}
+
+@keyframes clouds-animation {
+    0% {
+        right: -550px;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+.gameboard .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.container{
+    width: 500px;
+    height: auto;
+    background: #ad360b;
+    border: 5px solid #e69726;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: #1f1f1f 0px 0px 10px;
+}
+
+.container h1 {
+    font-size: 5rem;
+    color: #ffc982;
+    margin-bottom: 5px;
+}
+
+.container h2 {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.container button.gamepage{
+    width: 100%;
+    height: 50px;
+    background: #0568ae;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.container button.gamepage:hover {
+    background: #f41f1f;
+}
+
+.container button.details-button{
+    width: 100%;
+    height: 40px;
+    background: #3b3b3b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+.container button.details-button:hover {
+    background: #890808;
+}
+
+/*  */
+
+.gameboard .details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.details{
+    width: 500px;
+    height: auto;
+    background: #ad360b;
+    border: 5px solid #e69726;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: #1f1f1f 0px 0px 10px;
+}
+
+.details h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.details button.github{
+    width: 100%;
+    height: 50px;
+    background: #08012f;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.details button.github:hover {
+    background: #2f0468;
+}
+
+.details button.repository{
+    width: 100%;
+    height: 50px;
+    background: #08012f;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.details button.repository:hover {
+    background: #2f0468;
+}
+
+.details button.linkedin{
+    width: 100%;
+    height: 50px;
+    background: #1143a7;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.details button.linkedin:hover {
+    background: #0568ae;
+}
+
+.details button.returnbutton{
+    width: 100%;
+    height: 50px;
+    background: #b40000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.details button.returnbutton:hover {
+    background: #ff0000;
+}
+
+.details button.audiocontrol {
+    width: 100%;
+    height: 30px;
+    background: #606060;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.details button.audiocontrol:hover {
+    background: #8f8f8f;
+}

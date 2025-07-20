@@ -1,0 +1,225 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    color: #ffffff;
+}
+
+.gameboard {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 15px solid green;
+    background: linear-gradient(to bottom, #87CEEB, #ffffff 80%, #228B22 80%, #228B22);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: -80px;
+    animation: pipe-animation 2s linear infinite;
+    cursor: alias;
+    pointer-events: none;
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s linear infinite;
+    right: -550px;
+    z-index: 0;
+    cursor: alias;
+    pointer-events: none;
+}
+
+.Mario {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 150px;
+    cursor: alias;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.jump {
+    animation: mario-jump 500ms ease-out;
+}
+
+@keyframes pipe-animation {
+    from{
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes mario-jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 190px;
+    }
+    50% {
+        bottom: 190px;
+    }
+    60% {
+        bottom: 190px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    0% {
+        right: -550px;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+.header {
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items:initial;
+    justify-content:space-between;
+    z-index: 2;
+    padding: 5px 20px 0px 20px;
+    margin-bottom: 10px;
+    cursor: alias;
+    pointer-events: none;
+    user-select: none;
+}
+
+.header .scorepainel {
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+.header .text {
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+}
+
+.header .text h2, .header .text h3 {
+    font-size: 1rem;
+}
+
+
+.gameboard .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.container{
+    width: 350px;
+    height: auto;
+    background: #ffffff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: #1f1f1f 0px 0px 10px;
+}
+
+.container h2 {
+    font-size: 3rem;
+    color: #1f1f1f;
+    margin-bottom: 5px;
+}
+
+.container h3 {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.container button.restart{
+    width: 100%;
+    height: 50px;
+    background: #d12e2e;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.container button.resetscore {
+    width: 100%;
+    height: 30px;
+    background: #606060;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.container button.homepage {
+    width: 100%;
+    height: 30px;
+    background: #2260b7;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.container button.audiocontrol {
+    width: 100%;
+    height: 30px;
+    background: #606060;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.container button.audiocontrol:hover {
+    background: #8f8f8f;
+}
+
+.container button.homepage:hover {
+    background: #2974dd;
+}
+
+.container button.restart:hover {
+    background: #f41f1f;
+}
+
+.container button.resetscore:hover {
+    background: #8f8f8f;
+}
